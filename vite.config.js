@@ -3,11 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  server: {
-    port: 2929
-  },
   plugins: [
     react(),
     tailwindcss(),
-  ]
+  ],
+  base: "/happybirthday/"
 })
