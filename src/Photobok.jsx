@@ -131,7 +131,8 @@ const OrbitCarousel = ({ imageData }) => {
             if (!zoomedRef.current) {
                 if (!isDraggingRef.current) {
                     velocityRef.current *= 0.95;
-                    rotationRef.current += 0.06 + velocityRef.current;
+                    const baseSpeed = isMobile ? 0.2 : 0.06; // higher = faster auto-spin
+                    rotationRef.current += baseSpeed + velocityRef.current;
                 }
 
                 const rotation = rotationRef.current;
